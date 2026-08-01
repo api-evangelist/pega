@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: docs.pega.com DX API + https://trust.pega.com/
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: DX APIs authenticate exclusively via OAuth 2.0 (Client Credentials and Authorization Code + PKCE) through a Client Registration rule.
+  - id: rest
+    conforms: true
+    evidence: DX APIs are REST endpoints over HTTPS with JSON payloads (POST /cases, GET /cases/{id}, PATCH /assignments/{id}/actions/{action}).
+  - id: hateoas
+    conforms: true
+    evidence: Case/assignment responses embed action links (href + rel + type) that drive subsequent PATCH calls.
+  - id: soc2
+    conforms: true
+    evidence: SOC 2 listed on https://trust.pega.com/
+  - id: iso27001
+    conforms: true
+    evidence: ISO 27001/27017/27018 listed on https://trust.pega.com/
+  - id: fedramp
+    conforms: true
+    evidence: FedRAMP listed on Pega trust center (Pega Cloud for Government).
+  - id: hipaa
+    conforms: true
+    evidence: HIPAA listed on https://trust.pega.com/
+  - id: pci-dss
+    conforms: true
+    evidence: PCI DSS listed on https://trust.pega.com/
+  - id: gdpr
+    conforms: true
+    evidence: GDPR listed on https://trust.pega.com/
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: DX API errors are documented as HTTP status (e.g. 403 permission, invalid-data) without a published application/problem+json contract.

@@ -1,8 +1,29 @@
 aid: pega
 name: Pega
-description: 'Pega is a company surfaced as a portfolio company of norwest-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Pega (Pegasystems) is an enterprise low-code platform for AI-powered decisioning
+  and workflow automation, spanning business process management (BPM), CRM, and
+  customer engagement across financial services, insurance, healthcare, government,
+  and manufacturing. External systems integrate with Pega Platform and Pega
+  Launchpad through the Constellation Digital Experience (DX) API — a REST + OAuth
+  2.0 surface for creating and driving cases and data objects — and through
+  first-party SDKs (React, Angular, Web Components, Mobile) that render Constellation
+  DX Components. Pega also publishes first-party Agent Skills for building on
+  Launchpad.
+accessModel:
+  pricing: paid
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://github.com/pegasystems.png
 url: https://raw.githubusercontent.com/api-evangelist/pega/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +33,38 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-- Unknown
-apis: []
+- Low-Code
+- Business Process Management
+- Workflow Automation
+- CRM
+- Decisioning
+- Artificial Intelligence
+- Enterprise
+- Case Management
+apis:
+- name: Pega DX API
+  description: >-
+    The Constellation Digital Experience (DX) API — REST endpoints external
+    systems use to create Launchpad/Platform cases and data objects, read them,
+    and advance them by running assignment actions. Authenticated with OAuth 2.0.
+  humanURL: https://docs.pega.com/bundle/platform/page/platform/dx-api/dx-api-overview.html
+  baseURL: https://docs.pega.com/bundle/platform/page/platform/dx-api/dx-api-overview.html
+  tags:
+  - DX API
+  - Case Management
+  - REST
+  properties:
+  - type: Documentation
+    url: https://docs.pega.com/bundle/platform/page/platform/dx-api/dx-api-overview.html
+  - type: Authentication
+    url: authentication/pega-authentication.yml
+  - type: Conventions
+    url: conventions/pega-conventions.yml
+  - type: ErrorCatalog
+    url: errors/pega-problem-types.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +73,62 @@ maintainers:
 common:
 - type: Website
   url: https://pega.com
+- type: DeveloperPortal
+  url: https://docs.pega.com
+- type: Documentation
+  url: https://docs.pega.com
+- type: APIReference
+  url: https://docs.pega.com/bundle/platform/page/platform/dx-api/dx-api-overview.html
+- type: GettingStarted
+  url: https://academy.pega.com
+- type: Support
+  url: https://community.pega.com
+- type: Blog
+  url: https://www.pega.com/blog
+- type: Pricing
+  url: https://launchpad.io/pricing
+- type: SignUp
+  url: https://launchpad.io/sign-up
+- type: TermsOfService
+  url: https://www.pega.com/terms
+- type: PrivacyPolicy
+  url: https://www.pega.com/privacy
+- type: Plans
+  url: plans/pega-plans-pricing.yml
+- type: GitHubOrganization
+  url: https://github.com/pegasystems
+- type: Packages
+  url: packages/pega-packages.yml
+- type: SDKs
+  url: packages/pega-packages.yml
+- type: Components
+  url: components/pega-components.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Authentication
+  url: authentication/pega-authentication.yml
+- type: Conventions
+  url: conventions/pega-conventions.yml
+- type: ErrorCatalog
+  url: errors/pega-problem-types.yml
+- type: Conformance
+  url: conformance/pega-conformance.yml
+- type: Compliance
+  url: security/pega-trust-center.yml
+- type: TrustCenter
+  url: https://trust.pega.com/
+- type: DomainSecurity
+  url: security/pega-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/pega-lifecycle.yml
+- type: Deprecation
+  url: https://docs.pega.com/bundle/platform/page/platform/release-notes/deprecated-and-removed-features.html
+- type: WellKnown
+  url: well-known/pega-well-known.yml
+- type: LLMsTxt
+  url: llms/pega-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 14
+  pass: local-v1

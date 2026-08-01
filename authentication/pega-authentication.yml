@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/pegasystems/pega-launchpad-agent-skills (launchpad-dx-apis/webembed SKILL.md) + docs.pega.com DX API authentication
+docs: https://docs.pega.com/bundle/platform/page/platform/dx-api/dx-api-overview.html
+summary:
+  types: [oauth2]
+  oauth2_flows: [clientCredentials, authorizationCode]
+  notes: >-
+    Pega DX APIs authenticate with OAuth 2.0. Access is granted via an OAuth 2.0
+    Client Registration rule in the Pega/Launchpad environment; the Persona bound
+    to the client registration determines the access roles and privileges (and
+    therefore which DX API operations the credentials may invoke). Callers are
+    provisioned an Application URL, an Access Token URL, a Client ID and a Client
+    Secret.
+schemes:
+  - name: OAuth2 Client Credentials
+    type: oauth2
+    flow: clientCredentials
+    token_url_pattern: "https://<accessTokenURL>/token"
+    grant: client_credentials
+    used_for: Server-to-server / external-system DX API integration (create case, get case, run action, query data views).
+    role_binding: Persona on the Client Registration rule
+  - name: OAuth2 Authorization Code (PKCE)
+    type: oauth2
+    flow: authorizationCode
+    pkce: true
+    used_for: Browser/embedded experiences (e.g. the <pega-embed> web-embed component) acting on behalf of an interactive user.

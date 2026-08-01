@@ -1,0 +1,35 @@
+# Pega (Pegasystems)
+
+> Pega is an enterprise low-code platform for AI-powered decisioning and workflow automation, spanning business process management (BPM), CRM, and customer engagement. External systems integrate through the Constellation Digital Experience (DX) API — a REST + OAuth 2.0 surface for creating and driving cases and data objects — and through first-party SDKs that render Constellation DX Components.
+
+## APIs
+- Pega DX API overview: https://docs.pega.com/bundle/platform/page/platform/dx-api/dx-api-overview.html
+- DX API base path (per-tenant): https://<appURL>/dx/api/application/v2
+
+## Authentication
+- OAuth 2.0 (Client Credentials, Authorization Code + PKCE) via a Client Registration rule: authentication/pega-authentication.yml
+
+## SDKs & Packages
+- @pega/react-sdk-components (npm): https://www.npmjs.com/package/@pega/react-sdk-components
+- @pega/angular-sdk-components (npm): https://www.npmjs.com/package/@pega/angular-sdk-components
+- pdstools (PyPI): https://pypi.org/project/pdstools/
+- Full list: packages/pega-packages.yml
+
+## Agent Skills
+- Pega Launchpad Agent Skills: https://github.com/pegasystems/pega-launchpad-agent-skills
+- Index: skills/_index.yml
+
+## Docs & Developer Resources
+- Documentation: https://docs.pega.com/
+- Community & Support: https://community.pega.com/
+- Academy (training): https://academy.pega.com/
+- GitHub org: https://github.com/pegasystems
+- Trust center (SOC 2, ISO 27001/27017/27018, PCI DSS, HIPAA, FedRAMP, GDPR): https://trust.pega.com/
+
+## Repo artifacts
+- Conventions: conventions/pega-conventions.yml
+- Errors: errors/pega-problem-types.yml
+- Conformance: conformance/pega-conformance.yml
+- Components: components/pega-components.yml
+- Lifecycle: lifecycle/pega-lifecycle.yml
+- Domain security: security/pega-domain-security.yml

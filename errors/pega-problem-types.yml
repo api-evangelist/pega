@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/pegasystems/pega-launchpad-agent-skills (launchpad-dx-apis SKILL.md)
+format: http-status
+notes: >-
+  The Pega DX API surfaces errors as HTTP status codes with a JSON body; there is
+  no published application/problem+json (RFC 9457) contract. Codes below are the
+  ones Pega documents for the Create/Action DX API operations.
+problems:
+  - status: 403
+    title: Insufficient permission
+    detail: The Persona bound to the OAuth Client Registration does not have access to create or act on the case/data object.
+    remediation: Recreate or reconfigure the Client Registration rule with a Persona that grants the required access role and privileges.
+  - status: 400
+    title: Invalid data
+    detail: A field supplied in the create/action body is not configured as an Allowed Field on the case or data object (or a required Allowed Field is missing).
+    remediation: Configure the field as an Allowed Field on the case/data object, or remove it; supply all required Allowed Fields.
+  - status: 401
+    title: Unauthorized
+    detail: Missing or invalid OAuth 2.0 access token.
+    remediation: Obtain a token from the environment's Access Token URL using the provisioned Client ID/Secret.

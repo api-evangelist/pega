@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/pegasystems + Pega Constellation documentation
+summary: >-
+  Pega ships client-side/embeddable UI via the Constellation design system and
+  its DX Component SDKs. External apps embed Pega forms/cases either through the
+  framework SDKs (React/Angular/Web Components/Mobile) rendering ConstellationJS
+  DX Components, or via the drop-in <pega-embed> web component and the
+  mashup web component that call the DX API directly.
+families:
+  - name: Constellation DX Component SDKs
+    description: Render Pega Constellation DX Components in a host app's own framework, driven by the ConstellationJS Engine APIs.
+    components:
+      - name: React SDK
+        loader: "@pega/react-sdk-components"
+        repo: https://github.com/pegasystems/react-sdk
+      - name: Angular SDK
+        loader: "@pega/angular-sdk-components"
+        repo: https://github.com/pegasystems/angular-sdk
+      - name: Web Components SDK
+        repo: https://github.com/pegasystems/web-components-sdk
+      - name: Constellation Mobile SDK
+        repo: https://github.com/pegasystems/constellation-mobile-sdk
+        platforms: [android, ios]
+  - name: Drop-in embed components
+    description: Prebuilt web components that embed a Launchpad/Platform experience or a single case type into an external website.
+    components:
+      - name: "<pega-embed>"
+        description: Launchpad web-embed component; embeds Launchpad experiences into external sites (CORS + OAuth Client Credentials/PKCE).
+        source: https://github.com/pegasystems/pega-launchpad-agent-skills
+      - name: mashup-webcomponent
+        description: Web component using the DX API to expose a Pega case type as a Mashup.
+        repo: https://github.com/pegasystems/mashup-webcomponent
+        demo: https://pegasystems.github.io/mashup-webcomponent
+  - name: Component gallery
+    description: Ready-to-use and customizable Constellation DX components.
+    components:
+      - name: constellation-ui-gallery
+        repo: https://github.com/pegasystems/constellation-ui-gallery

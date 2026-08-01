@@ -1,0 +1,14 @@
+{
+  "repo": "pega",
+  "feeds": [
+    {
+      "source": "https://community.pega.com",
+      "feed_url": "https://community.pega.com/rss.xml",
+      "title": "",
+      "saved": 2,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 2,
+  "fetched": "2026-07-25T15:00:33Z"
+}

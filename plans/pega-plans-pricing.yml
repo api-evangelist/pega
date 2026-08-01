@@ -1,0 +1,105 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Pega
+providerId: pega
+generated: '2026-07-20'
+method: searched
+created: '2026-07-20'
+modified: '2026-07-20'
+reconciled: true
+tags:
+  - Low-Code
+  - Workflow Automation
+  - Launchpad
+description: >-
+  Pega Launchpad is the publicly self-serve, unit-priced SaaS surface of the Pega
+  platform (the enterprise Pega Infinity / Pega Cloud offering is quoted by sales
+  and does not publish public list pricing). Launchpad is metered on "Launchpad
+  Units" consumed by application outcomes. Tiers and prices below are the published
+  Launchpad plans; enterprise Pega Platform pricing is contract-only and not shown.
+sources:
+  - https://launchpad.io/pricing
+plans:
+  - id: pega-launchpad-explore
+    name: Explore
+    type: free
+    description: Free tier — build unlimited Blueprints (AI-generated app designs) and use the Units Estimator. No production runtime.
+    entries:
+      - label: Blueprints
+        name: blueprints
+        type: included
+        metric: blueprint
+        limit: -1
+        timeFrame: month
+        unit: 1
+        price: '0'
+        userMultiplied: false
+  - id: pega-launchpad-ignite
+    name: Ignite
+    type: subscription
+    description: Entry paid plan — unlimited production apps, developers and subscribers, metered by Launchpad Units.
+    entries:
+      - label: Monthly subscription
+        name: ignite_monthly
+        type: recurring
+        metric: subscription
+        limit: 1
+        timeFrame: month
+        unit: 1
+        price: '900'
+        currency: USD
+        userMultiplied: false
+      - label: Included Launchpad Units
+        name: ignite_units
+        type: included
+        metric: launchpad-unit
+        limit: 2500000
+        timeFrame: month
+        unit: 1
+        price: '0'
+        userMultiplied: false
+      - label: Approximate included outcomes
+        name: ignite_outcomes
+        type: included
+        metric: outcome
+        limit: 7000
+        timeFrame: month
+        unit: 1
+        price: '0'
+        userMultiplied: false
+  - id: pega-launchpad-accelerate
+    name: Accelerate
+    type: custom
+    description: Higher-volume plan for more Launchpad Units and support — custom quoted via sales.
+    entries:
+      - label: Custom quote
+        name: accelerate_custom
+        type: quote
+        metric: subscription
+        limit: -1
+        timeFrame: month
+        unit: 1
+        price: contact-sales
+        userMultiplied: false
+  - id: pega-launchpad-startups
+    name: Launchpad for Startups
+    type: custom
+    description: Startup-focused offering with investment-application opportunities — custom terms.
+    entries:
+      - label: Custom terms
+        name: startups_custom
+        type: quote
+        metric: subscription
+        limit: -1
+        timeFrame: month
+        unit: 1
+        price: contact-sales
+        userMultiplied: false
+add_ons:
+  - id: pega-launchpad-catalyst
+    name: Catalyst Program
+    description: Premium support / enablement add-on.
+    price: '12000'
+    currency: USD
+    timeFrame: month

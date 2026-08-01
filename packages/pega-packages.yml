@@ -1,0 +1,64 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/pegasystems + npm registry + PyPI
+packages:
+  - language: javascript
+    registry: npm
+    name: "@pega/react-sdk-components"
+    version: 25.1.11
+    url: https://www.npmjs.com/package/@pega/react-sdk-components
+    install: npm install @pega/react-sdk-components
+    repo: https://github.com/pegasystems/react-sdk-components
+    description: React SDK infrastructure — bridge and components for rendering Pega Constellation DX Components in a React app.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@pega/react-sdk-overrides"
+    url: https://www.npmjs.com/package/@pega/react-sdk-overrides
+    install: npm install @pega/react-sdk-overrides
+    repo: https://github.com/pegasystems/react-sdk-components
+    description: Override components for the Pega Constellation React SDK.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@pega/angular-sdk-components"
+    url: https://www.npmjs.com/package/@pega/angular-sdk-components
+    install: npm install @pega/angular-sdk-components
+    repo: https://github.com/pegasystems/angular-sdk-components
+    description: Angular components used by the Pega Constellation Angular SDK to render DX Components.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@pega/angular-sdk-overrides"
+    url: https://www.npmjs.com/package/@pega/angular-sdk-overrides
+    install: npm install @pega/angular-sdk-overrides
+    repo: https://github.com/pegasystems/angular-sdk-components
+    description: Override components for the Pega Constellation Angular SDK.
+    official: true
+  - language: python
+    registry: pypi
+    name: pdstools
+    version: 4.7.1
+    url: https://pypi.org/project/pdstools/
+    install: pip install pdstools
+    repo: https://github.com/pegasystems/pega-datascientist-tools
+    description: Pega Data Scientist Tools — open-source tooling to analyze Pega ADM decisioning models (Customer Decision Hub / Process AI).
+    official: true
+# Additional first-party SDK source repos (not published as single-name registry packages):
+source_repos:
+  - name: web-components-sdk
+    url: https://github.com/pegasystems/web-components-sdk
+    description: Bridge from the Constellation JavaScript Engine via Web Components.
+    official: true
+  - name: constellation-mobile-sdk
+    url: https://github.com/pegasystems/constellation-mobile-sdk
+    description: Embed Pega Constellation forms into native Android/iOS apps (Kotlin Multiplatform).
+    official: true
+  - name: angular-sdk
+    url: https://github.com/pegasystems/angular-sdk
+    description: Angular SDK bridging the Constellation JavaScript Engine.
+    official: true
+  - name: react-sdk
+    url: https://github.com/pegasystems/react-sdk
+    description: React SDK for building DX components against the ConstellationJS Engine APIs.
+    official: true

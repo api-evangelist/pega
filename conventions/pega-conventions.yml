@@ -1,0 +1,50 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/pegasystems/pega-launchpad-agent-skills (launchpad-dx-apis SKILL.md) + docs.pega.com DX API
+summary: >-
+  Cross-cutting request/response semantics for the Pega Digital Experience (DX)
+  API — the REST surface external systems use to create and drive Pega/Launchpad
+  cases and data objects.
+authentication:
+  style: oauth2
+  detail: OAuth 2.0 Client Credentials (server-to-server) or Authorization Code + PKCE; access scoped by the Persona on the Client Registration rule.
+  see: authentication/pega-authentication.yml
+base_path:
+  pattern: "https://<appURL>/dx/api/application/v2"
+  notes: Per-tenant. The Application URL is provisioned by the environment owner.
+resources:
+  - name: cases
+    create: POST /cases (body caseTypeID + content)
+    read: GET /cases/{ID}
+  - name: objects
+    create: POST /objects (body objectTypeID + content)
+    read: GET /objects/{ID}
+  - name: assignments/actions
+    run: PATCH /assignments/{ID}/actions/{actionID}?outcome=<Approve|Reject>
+  - name: data views
+    query: query data views with filter criteria
+  - name: attachments
+    read: retrieve additional application content (attachments)
+identifiers:
+  scheme: opaque base64 case/object ID returned as data.ID; a human businessID (e.g. ROT-715ABE) is also returned.
+  guidance: Store the returned ID in the external system for all subsequent DX API calls on that case/object.
+hateoas:
+  supported: true
+  detail: Case/assignment responses embed available actions as links (href, rel, title, type) — the type field names the HTTP method (e.g. PATCH) to invoke that action.
+allowed_fields:
+  detail: Only fields configured as Allowed Fields on the case/data object may be written; unknown fields cause an invalid-data error; required Allowed Fields must be supplied.
+error_model:
+  style: http-status
+  examples:
+    - status: 403
+      meaning: The Persona bound to the Client Registration lacks permission to create/act on the case or object.
+    - status: 400
+      meaning: Invalid data — a field not configured as an Allowed Field was supplied.
+  see: errors/pega-problem-types.yml
+idempotency:
+  supported: false
+  notes: No idempotency-key header is documented for the DX API create operations.
+versioning:
+  style: uri-path
+  current: v2
+  detail: DX API version is carried in the path (/dx/api/application/v2). See lifecycle/pega-lifecycle.yml.

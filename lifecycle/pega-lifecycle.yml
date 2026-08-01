@@ -1,0 +1,15 @@
+generated: '2026-07-20'
+method: searched
+source: docs.pega.com DX API + Pega product versioning
+versioning:
+  scheme: uri-path
+  current: v2
+  detail: The Constellation DX API is versioned in the request path (/dx/api/application/v2). Pega Platform / Pega Infinity releases follow calendar-style version trains (e.g. 24.x, 25.x).
+  docs: https://docs.pega.com/bundle/platform/page/platform/dx-api/dx-api-overview.html
+deprecation:
+  policy_url: https://docs.pega.com/bundle/platform/page/platform/release-notes/deprecated-and-removed-features.html
+  notes: Pega publishes deprecated-and-removed-features release notes per platform version.
+status_page: null
+sla:
+  notes: Pega Cloud availability commitments are contractual (Pega Cloud subscription); not a single public numeric target.
+deprecated_operations: []

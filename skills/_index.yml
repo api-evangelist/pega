@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/pegasystems/pega-launchpad-agent-skills
+notes: >-
+  Pega publishes first-party Agent Skills (SKILL.md format) for building on Pega
+  Launchpad. The published set is indexed below (upstream verbatim source of
+  truth). pega-launchpad-dx-apis.md is an API Evangelist packaged skill grounded
+  in the real DX API operations documented in the upstream launchpad-dx-apis skill.
+published_skills:
+  - name: launchpad-dx-apis
+    description: Use the Create/Get/Action DX APIs to create and drive Launchpad cases and data objects from an external system over REST + OAuth 2.0.
+    source: https://github.com/pegasystems/pega-launchpad-agent-skills/blob/master/skills/launchpad-dx-apis/SKILL.md
+  - name: launchpad-webembed
+    description: Embed Launchpad experiences into external websites with the <pega-embed> web component (CORS + OAuth Client Credentials/PKCE).
+    source: https://github.com/pegasystems/pega-launchpad-agent-skills/blob/master/skills/launchpad-webembed/SKILL.md
+  - name: launchpad-ux-custom-components
+    description: Build custom components on the Constellation design system via the DXCB framework.
+    source: https://github.com/pegasystems/pega-launchpad-agent-skills/blob/master/skills/launchpad-ux-custom-components/SKILL.md
+  - name: launchpad-custom-function
+    description: Extend Launchpad with custom logic in Java, Python, or Node.js (upload JAR/Python artifacts and invoke methods).
+    source: https://github.com/pegasystems/pega-launchpad-agent-skills/blob/master/skills/launchpad-custom-function/SKILL.md
+  - name: launchpad-ux-custom-frontend
+    description: Build a custom React frontend using the Pega React SDK + Constellation runtime.
+    source: https://github.com/pegasystems/pega-launchpad-agent-skills/blob/master/skills/launchpad-ux-custom-frontend/SKILL.md
+skills:
+  - file: pega-launchpad-dx-apis.md
+    name: Drive a Launchpad case with the DX API
+    api: DX API (https://<appURL>/dx/api/application/v2)
+    operations: [createCase, getCase, createDataObject, runAssignmentAction]
