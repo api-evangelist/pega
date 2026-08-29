@@ -10,6 +10,17 @@ description: >-
   first-party SDKs (React, Angular, Web Components, Mobile) that render Constellation
   DX Components. Pega also publishes first-party Agent Skills for building on
   Launchpad.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: self-serve
