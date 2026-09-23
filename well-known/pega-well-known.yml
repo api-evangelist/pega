@@ -1,7 +1,12 @@
 generated: '2026-07-20'
 method: searched
 host: https://www.pega.com
-documents:
+notes: pega.com publishes no /.well-known discovery documents. Pega OAuth/OIDC discovery metadata is exposed
+  per-tenant on the customer's own Pega instance (Client Registration + Access Token URL), not on the
+  corporate domain.
+hosts:
+- host: https://www.pega.com
+  documents:
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
@@ -12,7 +17,8 @@ documents:
     status: 404
   - path: /.well-known/ai-plugin.json
     status: 404
-notes: >-
-  pega.com publishes no /.well-known discovery documents. Pega OAuth/OIDC
-  discovery metadata is exposed per-tenant on the customer's own Pega instance
-  (Client Registration + Access Token URL), not on the corporate domain.
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
