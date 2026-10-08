@@ -104,3 +104,46 @@ add_ons:
     price: '12000'
     currency: USD
     timeFrame: month
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - negotiated
+  - subscription
+  units:
+  - period
+  plans:
+  - name: Explore
+    access: free
+    model: free
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Ignite
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - other
+    - period
+    periods:
+    - month
+  - name: Accelerate
+    access: negotiated
+    model: negotiated
+    model_how: stated
+    units:
+    - period
+    periods:
+    - month
+  - name: Launchpad for Startups
+    access: negotiated
+    model: negotiated
+    model_how: stated
+    units:
+    - period
+    periods:
+    - month
