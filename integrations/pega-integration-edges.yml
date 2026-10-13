@@ -1,16 +1,36 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/pega/integrations
 - https://n8n.io/integrations/pega/
 - https://composio.dev/toolkits/pega
 - https://monid.ai/tools/pega
 checked:
+- https://aws.amazon.com/marketplace/
 - https://composio.dev/toolkits/pega
 - https://monid.ai/tools/pega
 - https://n8n.io/integrations/pega/
 - https://zapier.com/apps/pega/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=afc4b095-a1b3-4f67-a47b-91ac6a136742
+  listing_count: 8
+  apps:
+  - Pega Platform
+  - Pega Cloud
+  - Pega Customer Service
+  - Launchpad.io - AI-Powered B2B Software Platform
+  - Pega Customer Decision Hub
+  seller_name: Pegasystems
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
 templates: []
