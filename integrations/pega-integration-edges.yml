@@ -17,25 +17,6 @@ checked:
 summary: null
 marketplace_apps: []
 edges:
-- partner_name: AWS Marketplace
-  partner: amazon-web-services
-  partner_match: aggregator
-  type: marketplace
-  marketplace: aws-marketplace
-  channel: distribution
-  relationship: distribution-channel
-  direction: third-party
-  evidence: https://aws.amazon.com/marketplace/seller-profile?id=afc4b095-a1b3-4f67-a47b-91ac6a136742
-  listing_count: 8
-  apps:
-  - Pega Platform
-  - Pega Cloud
-  - Pega Customer Service
-  - Launchpad.io - AI-Powered B2B Software Platform
-  - Pega Customer Decision Hub
-  seller_name: Pegasystems
-  detected_by: sweep-cloud-marketplaces.py
-  detected: '2026-10-13'
 - partner_name: FedRAMP
   partner: null
   partner_match: register
@@ -135,4 +116,23 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-gov-cloud.py
   first_seen: '2026-10-15'
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: distribution-channel
+  direction: third-party
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=afc4b095-a1b3-4f67-a47b-91ac6a136742
+  listing_count: 8
+  apps:
+  - Pega Platform
+  - Pega Cloud
+  - Launchpad.io - AI-Powered B2B Software Platform
+  - Pega Customer Service
+  - Pega Customer Decision Hub
+  seller_name: Pegasystems
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
 templates: []
