@@ -7,7 +7,9 @@ source:
 - https://monid.ai/tools/pega
 checked:
 - https://aws.amazon.com/marketplace/
+- https://cloudsecurityalliance.org/star/registry
 - https://composio.dev/toolkits/pega
+- https://eucoc.cloud/en/public-register/list-of-adherent-services
 - https://govramp.org/program-participants
 - https://monid.ai/tools/pega
 - https://n8n.io/integrations/pega/
@@ -135,4 +137,38 @@ edges:
   seller_name: Pegasystems
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
+- partner_name: Cloud Security Alliance STAR Registry
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://cloudsecurityalliance.org/star/registry/pegasystems/services/pega-cloud
+  category: Cloud security assurance
+  contract_reference:
+    register: CSA STAR Registry (cloudsecurityalliance.org/star/registry)
+    spec_file: null
+    standard: CSA STAR
+    role: star-level-2
+    registered_name: Pegasystems
+    registry_id: pegasystems
+    service_url: https://pega.com/products/cloud
+    matched_domain: pega.com
+    matched_by: domain
+    identity_source: the service URL the organisation filed on its STAR listing (no lookup)
+    levels:
+    - STAR Level 1
+    - STAR Level 2
+    certified_products:
+    - product: STAR Certification
+      lapsed: false
+      latest: '2026-09-08'
+    signal_note: STAR Level 1 (CAIQ self-assessment) = participation; certified_products = one entry per STAR Level
+      2 / STAR for AI Level 2 assessment TYPE (third-party certification, attestation, C-STAR, ValidAIted); lapsed
+      = every instance marked (Deprecated) by the registry; service counts never recorded
+    detected_by: sweep-compliance-assurance.py
+    detected: '2026-10-20'
+  detected_by: sweep-compliance-assurance.py
+  first_seen: '2026-10-20'
 templates: []
