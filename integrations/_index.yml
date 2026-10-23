@@ -206,19 +206,6 @@
     detected: '2026-10-21'
   status: not-a-workflow
   arazzo: null
-- slug: pega-salesforce-own
-  label: Salesforce (own)
-  partner: salesforce
-  partner_name: Salesforce (own)
-  category: agentProductivity
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000FNBd8UAH
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: pega-uk-g-cloud-14-digital-marketplace
   label: UK G-Cloud 14 (Digital Marketplace)
   partner_name: UK G-Cloud 14 (Digital Marketplace)
@@ -315,5 +302,31 @@
       publish advisories for its scope); never a count of CVEs
     detected_by: sweep-vulnerability-disclosure-cna.py
     detected: '2026-10-22'
+  status: not-a-workflow
+  arazzo: null
+- slug: pega-salesforce-own
+  label: Salesforce (own)
+  partner: salesforce
+  partner_name: Salesforce (own)
+  category: agentProductivity
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000FNBd8UAH
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: pega-adobe-experience-cloud-own
+  label: Adobe Experience Cloud (own)
+  partner: adobe-experience-cloud
+  partner_name: Adobe Experience Cloud (own)
+  category: Adobe Exchange Experience Cloud listing (Experience Platform)
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://exchange.adobe.com/apps/ec/107597
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
